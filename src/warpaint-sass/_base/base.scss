@@ -1,0 +1,26 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html{
+  font-size: $base-font-size * $ratio-xs;
+  line-height: $base-line-height;
+
+  @include small-view { font-size: $base-font-size * $ratio-s; }
+  @include medium-view { font-size: $base-font-size * $ratio-m; }
+  @include large-view { font-size: $base-font-size * $ratio-l; }
+  @include xlarge-view { font-size: $base-font-size * $ratio-xl; }
+  @include xxlarge-view { font-size: $base-font-size * $ratio-xxl; }
+}
+
+ul li{
+  list-style: circle;
+}
+
+img{
+  max-width: 100%;
+}

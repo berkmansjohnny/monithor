@@ -1,0 +1,58 @@
+/**
+ * Inset
+ * A square inset indents content on all four sides equally.
+ * Based and inspired by https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#.w5ff4nwob
+ */
+.inset-xs{ padding: $space-xs; }
+.inset-s{ padding: $space-s; }
+.inset-m,.inset{ padding: $space-m; }
+.inset-l{ padding: $space-l; }
+.inset-xl{ padding: $space-xl; }
+
+/**
+ * Squished inset
+ *
+ * A squished inset stretches horizontally as it reduces space top and bottom by 50% of the inset.
+ * Less common than the square inset but is used for buttons and
+ * cell-like containers as tables of lists
+ */
+.squished-xs{ padding: $space-xs / 2 $space-xs; }
+.squished-s{ padding: $space-s / 2 $space-s; }
+.squished-m,.squished{ padding: $space-m / 2 $space-m; }
+.squished-l{ padding: $space-l / 2 $space-l; }
+.squished-xl{ padding: $space-xl / 2 $space-xl; }
+
+/**
+ * Stretched inset
+ *
+ * Stretched inset stretches vertically and is
+ * used for textboxes and other form elements
+ */
+.stretched-xs{ padding: $space-xs $space-xs / 2; }
+.stretched-s{ padding: $space-s $space-s / 2; }
+.stretched-m,.stretched{ padding: $space-m $space-m / 2; }
+.stretched-l{ padding: $space-l $space-l / 2; }
+.stretched-xl{ padding: $space-xl $space-xl / 2; }
+
+/**
+ * Stack
+ *
+ * Stack elements on each other
+ */
+.stack-xs{ margin-top: $space-xs; margin-bottom:$space-xs; }
+.stack-s{ margin-top: $space-s; margin-bottom:$space-s; }
+.stack-m,.stack{ margin-top: $space-m; margin-bottom:$space-m; }
+.stack-l{ margin-top: $space-l; margin-bottom:$space-l; }
+.stack-xl{ margin-top: $space-xl; margin-bottom:$space-xl; }
+
+/**
+ * Inline
+  *
+  * Arrange object inline. For pills, tags, breadrumbs
+  *
+  */
+.inline-xs{ margin-left: $space-xs; margin-right:$space-xs; }
+.inline-s{ margin-left: $space-s; margin-right:$space-s; }
+.inline-m,.inline{ margin-left: $space-m; margin-right:$space-m; }
+.inline-l{ margin-left: $space-l; margin-right:$space-l; }
+.inline-xl{ margin-left: $space-xl; margin-right:$space-xl; }

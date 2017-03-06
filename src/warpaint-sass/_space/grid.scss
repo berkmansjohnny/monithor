@@ -1,0 +1,36 @@
+.row{
+  display:block;
+
+  @include small-view(){
+    display:flex;
+    flex-wrap: wrap; /* Allow overflow to wrap to following line */
+    justify-content: space-between;
+  }
+
+  &.top{ align-items: flex-start; }
+  &.center{ align-items: center; }
+  &.bottom{ align-items: flex-end; }
+}
+
+@include small-view(){
+
+
+  @for $i from 1 through $grid-columns {
+
+    .column-#{$i} {
+      float:left; /* non-flexbox support for basic columns */
+      width: 100% / $grid-columns  * $i;
+    }
+  }
+
+}
+
+.column{
+
+  width: 100%;
+
+  @include small-view(){
+      float:left;
+      flex:1;
+    }  
+}

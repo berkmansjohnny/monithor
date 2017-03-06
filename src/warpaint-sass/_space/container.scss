@@ -1,0 +1,21 @@
+// content will be contained in relation to the screen width.
+.container {
+    @extend .clearfix;
+    margin-left: 4%;
+    margin-right: 4%;
+
+    @include medium-view {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    @include large-view {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    @include xlarge-view {
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+}

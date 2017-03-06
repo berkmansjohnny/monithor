@@ -1,0 +1,152 @@
+$sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
+
+@include xsmall-view(){
+  
+  @for $i from 1 through $grid-columns {
+    .xs-column-#{$i}  {
+      float:left;
+      width: 100% / $grid-columns  * $i;
+    }
+
+    .gutter .xs-column-#{$i}  {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
+    }
+  }
+
+  @each $size,$space in $sizes
+  {
+    @for $i from 1 through $grid-columns {
+      .gutter-#{$size} .xs-column-#{$i}  {
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+      }
+    }
+
+    .xs-inset-#{$size} { padding: $space; }
+    .xs-squished-#{$size} { padding: $space / 2 $space; }
+    .xs-stretched-#{$size}{ padding: $space $space / 2; }
+    .xs-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .xs-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+  }
+
+}
+
+@include small-view(){
+  
+  @for $i from 1 through $grid-columns {
+    .s-column-#{$i}{
+      float:left;
+      width: 100% / $grid-columns  * $i;
+    }
+
+    .gutter .s-column-#{$i}  {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
+    }
+  }
+
+  @each $size,$space in $sizes
+  {
+    @for $i from 1 through $grid-columns {
+      .gutter-#{$size} .s-column-#{$i}  {
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+      }
+    }
+
+    .s-inset-#{$size}{ padding: $space; }
+    .s-squished-#{$size} { padding: $space / 2 $space; }
+    .s-stretched-#{$size}{ padding: $space $space / 2; }
+    .s-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .s-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+  }
+
+}
+
+@include medium-view(){
+  
+  @for $i from 1 through $grid-columns {
+    .m-column-#{$i} {
+      float:left;
+      width: 100% / $grid-columns  * $i;
+    }
+
+    .gutter .m-column-#{$i}  {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
+    }
+  }
+
+  @each $size,$space in $sizes
+  {
+    @for $i from 1 through $grid-columns {
+      .gutter-#{$size} .m-column-#{$i}  {
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+      }
+    }
+
+    .m-inset-#{$size} { padding: $space; }
+    .m-squished-#{$size} { padding: $space / 2 $space; }
+    .m-stretched-#{$size}{ padding: $space $space / 2; }
+    .m-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .m-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+  }
+
+}
+
+@include large-view(){
+  
+  @for $i from 1 through $grid-columns {
+    .l-column-#{$i} {
+      float:left;
+      width: 100% / $grid-columns  * $i;
+    }
+
+    .gutter .l-column-#{$i}  {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
+    }
+  }
+
+  @each $size,$space in $sizes
+  {
+    @for $i from 1 through $grid-columns {
+      .gutter-#{$size} .l-column-#{$i}  {
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+      }
+    }
+
+    .l-inset-#{$size} { padding: $space; }
+    .l-squished-#{$size} { padding: $space / 2 $space; }
+    .l-stretched-#{$size}{ padding: $space $space / 2; }
+    .l-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .l-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+  }
+
+}
+
+@include xlarge-view(){
+  
+  @for $i from 1 through $grid-columns {
+    .xl-column-#{$i}{
+      float:left;
+      width: 100% / $grid-columns  * $i;
+    }
+
+    .gutter .xl-column-#{$i}  {
+      width: (100% / $grid-columns  * $i) - ($space-m / 1rem);
+    }
+
+  }
+
+  @each $size,$space in $sizes
+  {
+    @for $i from 1 through $grid-columns {
+      .gutter-#{$size} .xl-column-#{$i}  {
+        width: (100% / $grid-columns  * $i) - ($space / 1rem);
+      }
+    }
+
+    .xl-inset-#{$size} { padding: $space; }
+    .xl-squished-#{$size} { padding: $space / 2 $space; }
+    .xl-stretched-#{$size}{ padding: $space $space / 2; }
+    .xl-stack-#{$size}{ margin-top: $space; margin-bottom:$space; }
+    .xl-inline-#{$size}{ margin-left: $space; margin-right:$space; }
+  }
+
+}

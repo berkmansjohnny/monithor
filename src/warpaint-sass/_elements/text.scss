@@ -1,0 +1,91 @@
+h1, h2, h3, h4, h5, h6{
+  margin-bottom:0;
+}
+
+h1{
+  font-size: $base-font-size * 2.2;
+  line-height: 1em;
+  margin-top: $space-l;
+}
+
+h2{
+  font-size: $base-font-size * 1.8;
+  line-height:1.25em;
+  margin-top:$space-l;
+
+}
+
+h3{
+  font-size: $base-font-size * 1.4;
+  margin-top:$space-l;
+  
+}
+
+h4{
+  font-size: $base-font-size * 1.2;
+}
+
+h5{
+  font-size: $base-font-size * 1.1;
+}
+
+h6{
+  font-size: $base-font-size;
+}
+
+
+p{
+
+  margin-top: $space-m;
+  margin-bottom: $space-m;
+  
+}
+
+/**
+ * Sizes independent of the viewports
+ *
+ * Projected line-heights are best guesses and merely
+ * approximations towards an optimal vertical rhythm
+ * e.g. line-height for font-l will hook into perfect
+ * vertical rhythm only on every 6-th line
+ */
+
+.font-xs{
+  font-size: $base-font-size * $ratio-xs;
+  line-height: $base-line-height * $ratio-xs;
+}
+
+.font-s{
+  font-size: $base-font-size * $ratio-s;
+  line-height: $base-line-height * $ratio-s;
+}
+
+.font-m{
+  font-size: $base-font-size * $ratio-m;
+  line-height: $base-line-height * $ratio-m; // should be approx. 1.4em
+}
+
+.font-l{
+  font-size: $base-font-size * $ratio-l;
+  line-height: $base-line-height;
+}
+
+.font-xl{
+  font-size: $base-font-size * $ratio-xl;
+  line-height: $base-line-height;
+}
+
+/**
+ * All first elements have a collapsed top margin by default. This ensures a better
+ * expected behaviour out of the box. 
+ */
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+p:first-child{
+    margin-top:0;
+}
+ 

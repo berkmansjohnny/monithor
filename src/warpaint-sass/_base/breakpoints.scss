@@ -1,0 +1,75 @@
+// Media Queries - mobile first approach
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";
+
+@mixin xsmall-view{
+  @media (min-width: #{$bp-xsmall}){
+    @content;
+  }
+}
+
+@mixin xsmall-view-retina{
+  @media (min-width: #{$bp-xsmall}) and #{$mq-retina}{
+    @content;
+  }
+}
+
+@mixin small-view{
+  @media (min-width: #{$bp-small}){
+    @content;
+  }
+}
+
+@mixin small-view-retina{
+  @media (min-width: #{$bp-small}) and #{$mq-retina}{
+    @content;
+  }
+}
+
+@mixin medium-view{
+  @media (min-width: #{$bp-medium}){
+    @content;
+  }
+}
+
+@mixin medium-view-retina{
+  @media (min-width: #{$bp-medium}) and #{$mq-retina}{
+    @content;
+  }
+}
+
+@mixin large-view{
+  @media (min-width: #{$bp-large}){
+    @content;
+  }
+}
+
+@mixin large-view-retina{
+  @media (min-width: #{$bp-large}) and #{$mq-retina}{
+    @content;
+  }
+}
+
+@mixin xlarge-view{
+  @media (min-width: #{$bp-xlarge}){
+    @content;
+  }
+}
+
+@mixin xlarge-view-retina{
+  @media (min-width: #{$bp-xlarge}) and #{$mq-retina}{
+    @content;
+  }
+}
+
+
+@mixin xxlarge-view{
+  @media (min-width: #{$bp-xxlarge}){
+    @content;
+  }
+}
+
+@mixin xxlarge-view-retina{
+  @media (min-width: #{$bp-xxlarge}) and #{$mq-retina}{
+    @content;
+  }
+}

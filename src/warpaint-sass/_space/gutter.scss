@@ -1,0 +1,76 @@
+$sizes: (xs : $space-xs, s : $space-s, m : $space-m, l : $space-l, xl : $space-xl);
+
+@include small-view(){
+
+  @each $size,$space in $sizes
+  {
+    
+    @for $i from 1 through $grid-columns {
+      .gutter-#{$size}{
+        .column-#{$i}{
+          width: (100% / $grid-columns  * $i) - ($space / 1rem); // divide by unit to remove unit
+          margin-left: #{($space / 1rem)+"%"};
+          margin-bottom: #{($space / 1rem)+"%"};
+        }
+        margin-left: -#{($space / 1rem)+"%"};
+      }
+    }
+
+    .gutter-#{$size} .column {
+      margin-left: #{($space / 1rem)+"%"};
+      margin-bottom: #{($space / 1rem)+"%"};
+    }
+
+  }
+
+  @for $i from 1 through $grid-columns {
+
+    .gutter{
+
+      .column-#{$i} {
+        width: (100% / $grid-columns  * $i) - ($space-m / 1rem); // divide by unit to remove unit
+        margin-left: #{($space-m / 1rem)+"%"};
+        margin-bottom: #{($space-m / 1rem)+"%"};
+      }
+
+    }
+  }
+}
+
+.gutter{
+  .column {
+    margin-left: #{($space-m / 1rem)+"%"};
+    margin-bottom: #{($space-m / 1rem)+"%"};
+  }
+
+  margin-left: -#{($space-m / 1rem)+"%"};
+}
+
+.gutter-around{
+  justify-content:space-around;
+}
+
+/**
+ * You should avoid setting container on a gutter row element since the margins will conflict
+ * If this is the case, we try to compensate the negative margins of the gutter. This is
+ * however not consistent if you use different gutter widths.
+ */
+@each $size,$space in $sizes
+{
+    .container.gutter-#{$size}{
+        margin-left: 4% - ($space / 1rem);
+        @include medium-view { margin-left: 8% - ($space / 1rem); }
+        @include large-view { margin-left: 12% - ($space / 1rem); }
+        @include xlarge-view { margin-left: 18% - ($space / 1rem); }
+    }
+
+}
+
+.container.gutter {
+  margin-left: 4% - ($space-m / 1rem);
+  @include medium-view { margin-left: 8% - ($space-m / 1rem); }
+  @include large-view { margin-left: 12% - ($space-m / 1rem); }
+  @include xlarge-view { margin-left: 18% - ($space-m / 1rem); }
+}
+
+
